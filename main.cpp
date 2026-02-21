@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -28,13 +29,12 @@ int main() {
     cout << "\nPruefungsergebnisse 2:" << endl;
     for (int i = 0; i < students.size(); i++) {
         if (students[i].note >= 4.0) {
-            cout << students[i].name << " " << students[i].note << " " << "Bestanden" << endl;
+            cout << students[i].name << " " << students[i].note << " " << "\x1b[32m" << "Bestanden" << "\x1b[0m" << endl;
         }
         else {
-            cout << students[i].name << " " << students[i].note << " " << "Nicht Bestanden" << endl;
+            cout << students[i].name << " " << students[i].note << " " << "\x1b[31m" << "Nicht Bestanden" << "\x1b[0m" << endl;
         }
     }
-
 
     return 0;
 }
